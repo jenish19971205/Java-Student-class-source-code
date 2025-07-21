@@ -140,6 +140,32 @@ Day 2
 
                 With inheritance, we follow a structure where common code is written once and shared across related classes. It keeps the code                        clean, smart, and easy to update or expand.
 
+   Polymorphism :
+ 
+                Polymorphism = One thing behaves in many forms.
+
+             In Java, it means:
+                Same method name, but it behaves differently depending on how or where it’s used.
+
+             Real-life example:
+                 You have one method: study()
+                 Sometimes, you study for hours
+                 Sometimes, a subject
+                 Sometimes, just generally
+                 All are study, but behavior is different. That's Polymorphism.
+
+   Types of Polymorphism in Java
+                      Type	                AKA	                 Decided When?
+                  1. Compile Time	 Method Overloading	     During Compilation
+                  2. Runtime	           Method Overriding	     During Program Run
+
+     1. Compile Time Polymorphism (aka Method Overloading)
+            Def :
+                Same method name, but different parameters (like input count or type).
+                Java decides which one to use while compiling.
+
+
+
 
 
 
