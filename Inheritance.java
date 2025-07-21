@@ -17,7 +17,14 @@ class CollegeStudent extends Student {
         cs.attendClass();
     }
 }
-//Multilevel Inheritance
+
+
+/*Multilevel Inheritance :
+  Multilevel Inheritance = One class extends another, and another class extends that.
+  So it’s like a chain of classes passing features down.
+  Final class can use everything from above. 
+*/
+
 class Student {
     void study() {
         System.out.println("I am studying.");
