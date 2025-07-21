@@ -1,20 +1,20 @@
 Day 1
 
-    Java Fundamentals & Git hub Commands
+          Java Fundamentals & Git hub Commands
 
     Classes :
 
-  A class in Java is like a design or layout. It tells what things an object will have and what it can do. By using this class, we can make real objects in the program. The class itself doesn’t    do anything — it just gives the structure. It makes our code neat, reusable, and easy to manage.
+          A class in Java is like a design or layout. It tells what things an object will have and what it can do. By using this class, we can make            real objects in the program. The class itself doesn’t do anything — it just gives the structure. It makes our code neat, reusable, and easy           to manage.
 
 
     Objects :
    
-  In Java, we use a class to create an object. That object will have all the values and actions defined inside the class
+          In Java, we use a class to create an object. That object will have all the values and actions defined inside the class
 
-  So basically, object is the real thing created from class. It stores values and we use it to run our code. Class is just the idea, object is the working part.
+          So basically, object is the real thing created from class. It stores values and we use it to run our code. Class is just the idea, object             is the working part.
 
-         Advantage: Objects help us reuse class code and store different data separately.
-         Disadvantage: Too many objects can use more memory and make the code harder to manage.
+       Advantage: Objects help us reuse class code and store different data separately.
+        Disadvantage: Too many objects can use more memory and make the code harder to manage.
 
      Collections :
   
@@ -88,6 +88,8 @@ Day 1
           git commit -m "msg" → save code version
           git remote add origin URL → link to GitHub
           git push → send code to GitHub
+
+Day 2
 
     Encapsulation :
 
