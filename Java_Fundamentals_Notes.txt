@@ -163,6 +163,12 @@ Day 2
             Def :
                 Same method name, but different parameters (like input count or type).
                 Java decides which one to use while compiling.
+     
+      2. RunTime Polymorphism :
+                Both parent and child have the same method name + same parameters,
+               but Java chooses which one to run while the program is running, based on the object.
+
+
 
 
 
