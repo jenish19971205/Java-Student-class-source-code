@@ -138,7 +138,7 @@ Day 2
                  Java doesn’t support multiple inheritance with classes (to avoid confusion).
                  But it supports it using interfaces, where a class can implement multiple interfaces.
 
-                 With inheritance, we follow a structure where common code is written once and shared across related classes. It keeps the code                        clean, smart, and easy to update or expand.
+                With inheritance, we follow a structure where common code is written once and shared across related classes. It keeps the code                        clean, smart, and easy to update or expand.
 
 
 
