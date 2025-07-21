@@ -118,18 +118,22 @@ Day 2
 
    Types of Inheritance in Java
          
-            1. Single Inheritance
+            1. Single Inheritance :
+
               One class inherits from one parent class.
               Common and simple — a direct relationship between two classes.
 
-            2. Multilevel Inheritance
+            2. Multilevel Inheritance :
+
                A class inherits from another class, which itself inherited from another.
                Like a chain — features get passed down step by step.
      
-            3. Hierarchical Inheritance
+            3. Hierarchical Inheritance :
+
                 Multiple classes inherit from a single parent class.
                 One base, many branches.
-            4. Multiple Inheritance
+            4. Multiple Inheritance :
+
                  Java doesn’t support multiple inheritance with classes (to avoid confusion).
                  But it supports it using interfaces, where a class can implement multiple interfaces.
 
