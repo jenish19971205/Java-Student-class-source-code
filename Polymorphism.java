@@ -25,7 +25,7 @@ class Student {
     }
 }
 /*
-     Compile Time Polymorphism :
+     Run Time Polymorphism :
      
        At compile time, Java only sees Student type.
        But at runtime, the object is actually CollegeStudent, so that version of study() runs.
