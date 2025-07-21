@@ -196,6 +196,12 @@ Day 2
          Abstract methods (only rule, no code)
         Class should be marked with abstract keyword.
 
+   2. Interface is just rules — no method body.
+         You can't put any normal methods (unless marked default or static).
+         All methods are public abstract by default.
+
+
+
 
 
 
