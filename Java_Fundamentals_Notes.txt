@@ -168,6 +168,34 @@ Day 2
                 Both parent and child have the same method name + same parameters,
                but Java chooses which one to run while the program is running, based on the object.
 
+    Abstraction :
+           Abstraction means: "Only show what’s needed, hide the rest."
+       It’s like:
+           When you drive a car, you don’t care how the engine works
+           You just use the steering, brake, accelerator
+       Same with Java:
+           Just show the important methods to the outside world
+           Hide the logic or inner working inside the class
+ 
+    Why Abstraction?
+           Hide complexity 🧠
+           Keep code clean & safe 🛡️
+           Force users to only use the needed parts ✋
+           Create a standard (rules to follow)
+
+   How to Achieve Abstraction in Java?
+        Java gives two ways to do Abstraction:
+
+           Tool	               Used For	  Abstraction Level
+          abstract class	     Partial	   0% – 100%
+           interface	      Full	     100%
+
+   1. Using abstract class (Partial Abstraction)
+         You write a class with both:
+         Normal methods (with code)
+         Abstract methods (only rule, no code)
+        Class should be marked with abstract keyword.
+
 
 
 
