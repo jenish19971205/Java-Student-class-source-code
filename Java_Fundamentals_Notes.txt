@@ -132,6 +132,7 @@ Day 2
 
                 Multiple classes inherit from a single parent class.
                 One base, many branches.
+
             4. Multiple Inheritance :
 
                  Java doesn’t support multiple inheritance with classes (to avoid confusion).
