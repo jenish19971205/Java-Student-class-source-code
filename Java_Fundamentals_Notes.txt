@@ -87,7 +87,20 @@ Day 1
           git add . → add all files
           git commit -m "msg" → save code version
           git remote add origin URL → link to GitHub
-           git push → send code to GitHub
+          git push → send code to GitHub
+
+    Encapsulation :
+
+          Encapsulation is the concept of hiding internal data of a class by making variables private, and controlling access through public methods            like getters and setters.
+
+          It keeps the important data safe, and avoids direct access from outside the class.
+          Only specific methods are allowed to read or update the values — this gives full control over how data is accessed or modified.
+
+          Encapsulation helps in:
+
+         1. Protecting sensitive data
+         2. Avoiding unwanted changes
+         3. Making the code clean, secure, and maintainable
 
 
 
