@@ -24,3 +24,31 @@ class CollegeStudent extends Student {
       This is called partial abstraction — some methods have body, some don’t.
 
 */
+interface Student {
+    void study();  // Rule
+    void play();   // Rule
+}
+
+class SchoolStudent implements Student {
+    public void study() {
+        System.out.println("I study from textbooks.");
+    }
+
+    public void play() {
+        System.out.println("I play football.");
+    }
+
+    public static void main(String[] args) {
+        SchoolStudent ss = new SchoolStudent();
+        ss.study();  // I study from textbooks.
+        ss.play();   // I play football.
+    }
+}
+/*
+      Student interface = list of rules
+      Any class that uses it must write all the method bodies
+      So outside world only sees the rule names, not the actual logic
+      This is 100% abstraction.
+
+*/
+
