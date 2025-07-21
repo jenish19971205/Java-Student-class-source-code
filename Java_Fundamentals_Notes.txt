@@ -25,7 +25,7 @@ Day 1
 
     Collection Types (Main 3):
 
-    1️⃣ List → Keeps order, allows duplicates
+    1. List → Keeps order, allows duplicates
 
          * Used when we want to store items one after another.
          *  Keeps the order we add.
@@ -37,7 +37,7 @@ Day 1
          * LinkedList – Better if adding/removing often
          * Vector – Like ArrayList, but thread-safe
 
-   2️⃣ Set → No duplicates allowed
+   2. Set → No duplicates allowed
 
          * Used when we want only unique values.
          * No duplicate items
@@ -49,7 +49,7 @@ Day 1
          * LinkedHashSet – Keeps order + no duplicates
          * TreeSet – Keeps sorted order + no duplicates
 
-   3️⃣ Map → Stores data as key-value pairs
+   3. Map → Stores data as key-value pairs
 
          (Not part of Collection interface, but in the Collection Framework)
          * Used when we want to store with an ID or name (key).
@@ -100,9 +100,42 @@ Day 2
 
           Encapsulation helps in:
 
-         1. Protecting sensitive data
-         2. Avoiding unwanted changes
-         3. Making the code clean, secure, and maintainable
+            1. Protecting sensitive data
+            2. Avoiding unwanted changes
+            3. Making the code clean, secure, and maintainable
+
+    Inheritance :
+          
+            1. Inheritance is an object-oriented concept where one class can use the properties and methods of another class, instead of writing                     everything from scratch.
+            2. The class that gives its features is called the parent (or superclass), and the class that receives them is called the child (or                      subclass).
+            3. In Java, this is done using the extends keyword.
+
+   Why Inheritance is used:
+            1.  To reuse existing code
+            2. To organize related classes
+            3. To avoid repetition
+            4.To make code clean and scalable
+
+   Types of Inheritance in Java
+         
+            1. Single Inheritance
+              One class inherits from one parent class.
+              Common and simple — a direct relationship between two classes.
+
+            2. Multilevel Inheritance
+               A class inherits from another class, which itself inherited from another.
+               Like a chain — features get passed down step by step.
+     
+            3. Hierarchical Inheritance
+                Multiple classes inherit from a single parent class.
+                One base, many branches.
+            4. Multiple Inheritance
+                 Java doesn’t support multiple inheritance with classes (to avoid confusion).
+                 But it supports it using interfaces, where a class can implement multiple interfaces.
+
+                 With inheritance, we follow a structure where common code is written once and shared across related classes. It keeps the code                        clean, smart, and easy to update or expand.
+
+
 
 
 
