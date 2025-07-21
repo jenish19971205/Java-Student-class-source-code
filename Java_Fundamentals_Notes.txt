@@ -1,0 +1,93 @@
+Day 1
+
+Java Fundamentals & Git hub Commands
+
+Classes :
+
+A class in Java is like a design or layout. It tells what things an object will have and what it can do. By using this class, we can make real objects in the program. The class itself doesn’t do anything — it just gives the structure. It makes our code neat, reusable, and easy to manage.
+
+
+Objects :
+   
+   In Java, we use a class to create an object. That object will have all the values and actions defined inside the class
+
+     So basically, object is the real thing created from class. It stores values and we use it to run our code. Class is just the idea, object is the working part.
+
+Advantage: Objects help us reuse class code and store different data separately.
+Disadvantage: Too many objects can use more memory and make the code harder to manage.
+
+Collections :
+  
+      	 Collection in Java means storing multiple values together in one place.
+
+* It gives us ready-made classes to add, remove, search and manage many values easily.
+* Instead of creating 10 variables, we can use one collection.
+
+ Collection Types (Main 3):
+
+1️⃣ List → Keeps order, allows duplicates
+
+* Used when we want to store items one after another.
+*  Keeps the order we add.
+*  Allows same value multiple times.
+
+Types:
+
+* ArrayList – Most common, fast to read
+* LinkedList – Better if adding/removing often
+* Vector – Like ArrayList, but thread-safe
+
+2️⃣ Set → No duplicates allowed
+
+* Used when we want only unique values.
+* No duplicate items
+* Order not always maintained (unless using LinkedHashSet)
+
+Types:
+
+* HashSet – Fast, but no order
+* LinkedHashSet – Keeps order + no duplicates
+* TreeSet – Keeps sorted order + no duplicates
+
+3️⃣ Map → Stores data as key-value pairs
+
+(Not part of Collection interface, but in the Collection Framework)
+* Used when we want to store with an ID or name (key).
+* Helps in quick searching by key
+*  Key should be unique, values can be duplicate
+Types:
+
+* HashMap – Fast, but no order
+* LinkedHashMap – Keeps order
+* TreeMap – Keeps sorted keys
+
+
+ Advantages :
+Helps store and manage multiple values with less code and more flexibility.
+
+Disadvantages :
+Uses more memory and can be complex if not used properly.
+
+
+Exception:
+
+    Exception means runtime error (error happens when program is running).
+    It stops the normal flow of the program.
+    If not handled, program will crash.
+
+   we use Exception Handling to catch the error and give a friendly message.
+  and To continue the program without stopping.
+
+GitHub commands :
+
+    git config --global user.name "Your Name"
+    git config --global user.email "your@email.com"
+
+    git init → start git
+    git add . → add all files
+    git commit -m "msg" → save code version
+    git remote add origin URL → link to GitHub
+    git push → send code to GitHub
+
+
+
