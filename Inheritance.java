@@ -86,4 +86,10 @@ class CollegeStudent extends Student {
         college.attendClass(); // from CollegeStudent
     }
 }
-
+/*
+        this is like one common parent class — Student.
+        Then we have two Childclass — SchoolStudent and CollegeStudent — both using the same parent’s features.
+        Like both are calling study() from Student class, but doing their own stuff also.
+        One is attending class, other is writing exam.
+        This is called Hierarchical Inheritance — many children, one parent.
+    */
