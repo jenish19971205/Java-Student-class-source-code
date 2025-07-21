@@ -1,4 +1,5 @@
-//Single Inheritance
+//Single Inheritance :
+
 
 class Student {
     void study() {
@@ -20,6 +21,7 @@ class CollegeStudent extends Student {
 
 
 /*Multilevel Inheritance :
+
   Multilevel Inheritance = One class extends another, and another class extends that.
   So it’s like a chain of classes passing features down.
   Final class can use everything from above. 
