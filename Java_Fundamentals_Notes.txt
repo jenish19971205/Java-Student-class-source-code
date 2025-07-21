@@ -199,6 +199,24 @@ Day 2
    2. Interface is just rules — no method body.
          You can't put any normal methods (unless marked default or static).
          All methods are public abstract by default.
+       
+                Feature	       abstract class	  interface
+            Can have method body?	Yes	           No (only rules)
+              Inheritance type	extends	           implements
+            Constructor allowed?	 Yes	            No
+               Access modifier	  Any	           All methods are public
+                   Fields	     Normal + final/static	 Only public static final
+             Abstraction Level	0–100%	              100% only
+
+        abstraction means we hide the logic and just give the rules or important parts.
+         Like a remote control — you click buttons, you don’t care how it works inside.
+        Java gives two ways:
+
+         🔹 abstract class: mix of rules and normal methods
+         🔹 interface: full rules, no code
+
+         Real use? → Helps to design clean structure, hide inner logic, and force rules in project.
+
 
 
 
