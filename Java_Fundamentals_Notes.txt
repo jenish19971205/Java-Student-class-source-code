@@ -186,7 +186,7 @@ Day 2
    How to Achieve Abstraction in Java?
         Java gives two ways to do Abstraction:
 
-           Tool	               Used For	  Abstraction Level
+             Tool	               Used For	  Abstraction Level
           abstract class	     Partial	   0% – 100%
            interface	      Full	     100%
 
