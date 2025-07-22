@@ -890,7 +890,59 @@ class OptionalExample {
              Optional is like saying:
             "This data might be missing, so handle it properly instead of letting the app crash."
 
-     Def :
+         Def :
              Optional — helps avoid null pointer exceptions by wrapping data safely. Used Optional with Student name to check if it's present and               printed a default message if not. It makes code safer and cleaner.
 
+
+15. try with resources :
+
+              You’re opening a water bottle (file), drinking water (reading file), and then you forget to close the cap (file).
+              Later, it leaks and creates a mess 💦
+
+         Same in Java:
+               If you open a file but forget to close it, it causes memory leaks or file errors.
+
+        So What Is try-with-resources?
+               It's a shortcut that tells Java:
+               I’m using this file here. After I’m done, you close it for me, even if there’s an error."
+
+       Example :
+             You have a file students.txt with names:
+
+             Ram
+             Meena
+             Kishore
+             We want to read that file.
+
+import java.io.*;
+
+class StudentFileReader {
+    public static void main(String[] args) {
+        // 🔓 try-with-resources: Java will open + auto-close the file
+        try (BufferedReader reader = new BufferedReader(new FileReader("students.txt"))) {
+            String name;
+            while ((name = reader.readLine()) != null) {
+                System.out.println("Student: " + name);
+            }
+        } catch (IOException e) {
+            System.out.println("Something went wrong: " + e.getMessage());
+        }
+    }
+}
+
+      Line by line
+            Line	                      What it does
+            try (...)	             We open the file inside this — Java will handle closing it
+            BufferedReader	             Reads the file one line at a time
+             readLine()	             Reads each student name
+            System.out.println(...)	    Prints the student name
+            catch	                      If something goes wrong (like file missing), this handles it
+
+              Without try-with-resources, you would write extra code to close the file manually.
+             But here — Java automatically closes it after the work is done. Clean and simple.
+
+      definition:
+              "try-with-resources is like telling Java to open something (like a file) and saying:
+              ‘Once I finish my work, you close it for me, bro.’
+               We use it to avoid memory leaks or forgetting to close files manually.”
 
