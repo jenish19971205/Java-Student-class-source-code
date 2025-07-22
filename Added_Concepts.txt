@@ -817,8 +817,80 @@ class StreamDemo {
                   .map()	         Change it (like get only name)
                   .sorted()	Sort the list
                   .collect()	Convert it back to List or Set
-Def  :
+     Def  :
 
            Practiced Java Streams — used to process list data easily like filtering, mapping, and sorting. Used Student list to filter by age, get            names, and sort by name without using loops. Very useful for cleaner and shorter code.
+
+14. Optional :
+
+           Optional is like saying:
+            this value might be there, or might be null. So handle it safely."
+            It’s a container (box) that may have:
+            A value 
+            Or nothing (empty) 
+
+       Why do we need Optional?
+            In normal Java, if you try to use something that’s null, it gives you:
+
+         NullPointerException 💀
+         But with Optional, Java says:
+
+             I’ll give you tools to check if it’s null or not, and safely do something with it.”
+
+       Example using Student class
+             Let’s say you try to get a student’s name, but sometimes it’s not set (i.e., null).
+            Let’s wrap it using Optional and play it safe 
+
+✅ Example Code:
+
+import java.util.Optional;
+
+class Student {
+    private Optional<String> name;
+
+    Student(String name) {
+        this.name = Optional.ofNullable(name); // wrap the value
+    }
+
+    void printName() {
+        if (name.isPresent()) {
+            System.out.println("Student name: " + name.get());
+        } else {
+            System.out.println("Name is not available.");
+        }
+    }
+}
+
+class OptionalExample {
+    public static void main(String[] args) {
+        Student s1 = new Student("Kishore");
+        Student s2 = new Student(null); // name is not set
+
+        s1.printName(); // Output: Student name: Kishore
+        s2.printName(); // Output: Name is not available.
+    }
+}
+         Code Explanation:
+               Optional<String> means the value might be there or not
+               Optional.ofNullable(name) safely wraps it (even if null)
+               .isPresent() checks if the value exists
+                .get() gives the actual value (only if present)
+
+          Never do this:
+
+        String name = null;
+       System.out.println(name.length()); // it Will crash if name is null
+       But with Optional:
+
+
+         Optional<String> name = Optional.ofNullable(null);
+         System.out.println(name.orElse("No name")); // ✅ Safe output
+
+         Explaination ;
+             Optional is like saying:
+            "This data might be missing, so handle it properly instead of letting the app crash."
+
+     Def :
+             Optional — helps avoid null pointer exceptions by wrapping data safely. Used Optional with Student name to check if it's present and               printed a default message if not. It makes code safer and cleaner.
 
 
