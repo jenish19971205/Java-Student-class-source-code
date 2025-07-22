@@ -253,11 +253,90 @@ class Student {
     }
 }
 
-Easy Explanation
+     Easy Explanation
         name.length() → how many letters in the name
         toUpperCase() → make it full caps
         charAt(1) → gives second letter (index starts from 0)
         + → you can join strings easily using + or concat()
         equals() → compare strings safely
         contains() → check if something is inside the string
+
+5. Method Overloading :
+
+      Same method name, but different parameters (inputs) in the same class.
+      Basically, you're doing similar work, but in multiple styles, depending on the input.
+
+  Simple Definition:
+      Method Overloading is when you create multiple methods with same name but different arguments in the same class.
+      Different number of parameters
+      Or different data types
+
+  Example: Method Overloading in Student
+
+class Student {
+    void showInfo(String name) {
+        System.out.println("Student Name: " + name);
+    }
+
+    void showInfo(String name, int age) {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+
+    void showInfo(int rollNo) {
+        System.out.println("Roll Number: " + rollNo);
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.showInfo("Arun");
+        s.showInfo("Arun", 20);
+        s.showInfo(101);
+    }
+}
+ Easy Explanation:
+       showInfo() is called multiple times
+       But each time with different inputs (name, name+age, rollNo)
+      Java automatically picks the right method based on input
+      This is overloading — same method name, different inputs
+
+6. Method Overriding?
+      Same method name, same parameters, but in different classes (Parent → Child)
+      You're changing the behavior of a method in the child class.
+
+   Simple Definition:
+       Method Overriding is when a child class gives its own version of a method that already exists in the parent class — with the same name and            parameters.
+
+  Example: Method Overriding in Student
+
+class Student {
+    void study() {
+        System.out.println("Student is studying.");
+    }
+}
+
+class CollegeStudent extends Student {
+    @Override
+    void study() {
+        System.out.println("College student is studying with laptop.");
+    }
+
+    public static void main(String[] args) {
+        CollegeStudent cs = new CollegeStudent();
+        cs.study();  // Calls overridden method
+    }
+}
+
+Easy Explanation:
+     Parent class has study() method
+     Child class (CollegeStudent) overrides that method
+     Even though method name and input is same, child class gives its own version
+     Java will run the child class version when object is of child
+
+    Overloading vs Overriding (Simple Table)
+
+           Feature	     Overloading	                            Overriding
+     Classes involved	      Same class	                           Parent and Child class
+       Method Signature	      Same name, different params	          Same name, same params
+          Purpose	           Do similar things in different ways	 Change behavior in child class
+       Example Use	      Print name, Print name+age	           Parent student vs College student
 
