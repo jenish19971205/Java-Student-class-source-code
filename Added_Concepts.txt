@@ -650,3 +650,80 @@ switch (s1.year) {
     case FINAL: System.out.println("Final year pressure!"); break;
 }
 
+11. Array List :
+
+           ArrayList is like a flexible array — size can grow/shrink anytime.
+           In normal array, size is fixed:
+
+           int[] arr = new int[5]; // only 5 values allowed
+           But in ArrayList, size is dynamic:
+
+          ArrayList<String> list = new ArrayList<>();
+          list.add("Ram");
+           list.add("Sam");
+     Key Points:
+           Can store multiple items (like names, marks, etc.)
+           Can add, remove, or access items easily
+           Only stores one type at a time (String, Integer, Student, etc.)
+
+     Example: Student Names List
+
+          import java.util.ArrayList;
+class StudentList {
+    public static void main(String[] args) {
+        ArrayList<String> students = new ArrayList<>();
+
+        students.add("Arun");
+        students.add("Meena");
+        students.add("Karthik");
+
+        System.out.println("All students: " + students);
+        System.out.println("First student: " + students.get(0));
+        students.remove(1);
+        System.out.println("After removal: " + students);
+    }
+}
+
+         ArrayList = advanced array that grows or shrinks
+         You can add students anytime, no need to fix size
+          get() to fetch, remove() to delete, add() to insert
+
+12. HashMap :
+          HashMap = store data in key-value pairs.
+
+    example:
+          Key = roll number
+          Value = student name
+
+
+          101 -> Arun  
+          102 -> Meena
+     Key Points:
+           Stores using Key : Value
+           Like a mini-database (quick lookup)
+           Keys must be unique
+
+      Example: Student Roll Numbers
+
+      import java.util.HashMap;
+
+class StudentMap {
+    public static void main(String[] args) {
+        HashMap<Integer, String> studentMap = new HashMap<>();
+
+        studentMap.put(101, "Arun");
+        studentMap.put(102, "Meena");
+        studentMap.put(103, "Karthik");
+
+        System.out.println("All students: " + studentMap);
+        System.out.println("Student with roll 102: " + studentMap.get(102));
+
+        studentMap.remove(101);
+        System.out.println("After removal: " + studentMap);
+    }
+}
+
+         HashMap = like a contact book (number = key, name = value)
+         You can add, get, or remove students by roll number
+         put() = add, get() = fetch, remove() = delete
+
