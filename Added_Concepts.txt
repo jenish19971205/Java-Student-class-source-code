@@ -477,3 +477,116 @@ class Student {
           Return Type	          No return type	                     Has return type (or void)
            When Called	  Runs automatically when object made	    Called manually using object.method()
           Purpose	                   Initialize object	                 Perform some action
+
+9. Inner Class :
+
+          Inner class simply means:
+          A class inside another class.
+
+         Think like this:
+               Student is the main class.
+               IDCard or Address is only useful for that student. So we keep that class inside the Student class.
+               It’s like a "helper" class that belongs to the outer class only.
+
+          Why Inner Class?
+                Keeps your code clean and grouped.
+                Inner class can access outer class variables directly (even private).
+                Used when one class is only related to one specific outer class.
+
+     1. Non-static Inner Class (Normal inner class)
+        It’s like:
+
+                "The Student has an IDCard. IDCard works only if a student exists."
+
+class Student {
+    String name = "Arun";
+
+    class IDCard {
+        void showID() {
+            System.out.println("ID Card for: " + name);
+        }
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        Student.IDCard card = s.new IDCard();
+        card.showID();
+    }
+}
+
+Explain:
+         IDCard is inside Student.
+         You need to create the Student object first (s.new IDCard()).
+         It can use name directly (no need to pass it).
+
+    2. Static Inner Class
+        It’s like:
+
+        "Course info is fixed for all students. So no need to create a student to see it."
+
+class Student {
+    static class Course {
+        void show() {
+            System.out.println("Java Programming Course");
+        }
+    }
+
+    public static void main(String[] args) {
+        Student.Course c = new Student.Course();  // No need for Student object
+        c.show();
+    }
+}
+      Explain:
+         Course class is marked as static.
+         So it works without creating Student object.
+         Good for common or utility stuff.
+
+   3. Local Inner Class (Inside Method)
+       It’s like:
+          "You use it inside a method only — not needed outside."
+
+class Student {
+    void showMarks() {
+        class Marks {
+            void display() {
+                System.out.println("Marks: 85");
+            }
+        }
+
+        Marks m = new Marks();
+        m.display();
+    }
+
+    public static void main(String[] args) {
+        new Student().showMarks();
+    }
+}
+    Explain:
+         Marks class is created inside a method.
+         You can use it only inside that method.
+          It's hidden from rest of the class.
+
+4. Anonymous Inner Class
+          It’s like:
+          "No class name. Just use it once, on the spot — mostly for overriding."
+
+abstract class Student {
+    abstract void study();
+}
+
+class Main {
+    public static void main(String[] args) {
+        Student s = new Student() {
+            void study() {
+                System.out.println("Studying Java");
+            }
+        };
+
+        s.study();
+    }
+}
+    Explain:
+          No class name — just override method quickly.
+         Mostly used when you want to change small behavior once.
+         Very common in Android, UI buttons, etc.
+
