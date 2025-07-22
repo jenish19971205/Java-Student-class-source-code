@@ -118,7 +118,7 @@ class Student {
 
        Learned Type Casting — changing value types. Covered auto casting (int ➡ float) and manual casting (double ➡ int) with Student example.
 
-Operators and presendance :
+3. Operators and presendance :
 
         In simple words, operators are symbols that do some work in Java — like add, subtract, compare, assign, etc.
        Operators are symbols used to do operations like math, checking conditions, assigning values, etc.
