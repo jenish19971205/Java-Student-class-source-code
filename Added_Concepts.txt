@@ -326,17 +326,73 @@ class CollegeStudent extends Student {
     }
 }
 
-Easy Explanation:
-     Parent class has study() method
-     Child class (CollegeStudent) overrides that method
-     Even though method name and input is same, child class gives its own version
-     Java will run the child class version when object is of child
+     Easy Explanation:
+          Parent class has study() method
+          Child class (CollegeStudent) overrides that method
+           Even though method name and input is same, child class gives its own version
+           Java will run the child class version when object is of child
 
-    Overloading vs Overriding (Simple Table)
+       Overloading vs Overriding (Simple Table)
 
            Feature	     Overloading	                            Overriding
      Classes involved	      Same class	                           Parent and Child class
        Method Signature	      Same name, different params	          Same name, same params
           Purpose	           Do similar things in different ways	 Change behavior in child class
        Example Use	      Print name, Print name+age	           Parent student vs College student
+
+7. Scope :
+
+       Scope means:
+             Where a variable can be seen or used in the program.
+              Or simply — how long and where a variable lives inside your code.
+
+       Types of Scope in Java :
+
+        Scope Type	      What it means
+        Local Scope	      Inside a method/block only
+        Instance Scope	      Inside class (non-static) — needs object
+        Static/Global Scope      Inside class (static) — no object needed
+        Block Scope	      Inside curly brackets {} like if/for
+
+       Example: Using Student Class to Show Scope
+
+class Student {
+    String name = "Arun";         // Instance Scope
+    static String school = "ABC"; // Static Scope
+
+    void printDetails() {
+        int age = 20; // Local Scope (inside method)
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+
+    void checkBlockScope() {
+        if (true) {
+            String course = "Java"; // Block Scope
+            System.out.println("Course: " + course);
+        }
+        // course variable can't be used here — outside its block
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.printDetails();
+        s.checkBlockScope();
+
+        // Static can be accessed directly
+        System.out.println("School: " + school);
+    }
+}
+
+Easy Explanation:
+       name → can be used in any non-static method (belongs to object)
+       school → can be used anywhere in class (static = belongs to class)
+       age → only inside the printDetails() method
+      course → only inside the if block where it was created
+
+ Analogy:
+        Local = Just temporary, like something in your pocket
+        Instance = Belongs to object, like your ID card
+        Static = Shared by all, like school name
+        Block = Limited, like a locker only in one room
 
