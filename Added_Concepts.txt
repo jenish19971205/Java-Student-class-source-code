@@ -114,6 +114,76 @@ class Student {
           int convertedMarks = (int) marks; → becomes 85 (cuts .6)
           System.out.println() shows both outputs
 
-Def: 
+        Def: 
 
        Learned Type Casting — changing value types. Covered auto casting (int ➡ float) and manual casting (double ➡ int) with Student example.
+
+Operators and presendance :
+
+        In simple words, operators are symbols that do some work in Java — like add, subtract, compare, assign, etc.
+       Operators are symbols used to do operations like math, checking conditions, assigning values, etc.
+
+              Types of Operators in Java (With Easy Meaning)
+
+                       Type	          What It Does	                      Example
+                  Arithmetic	    Do math (+, -, *, /, %)	             a + b
+             Relational / Comparison    Compare two values (==, >, <, etc.)	    a > b
+                    Logical	       Combine conditions (&&,	
+                  Assignment              Assign value (=, +=, -=, etc.)	    a = 10
+                      Unary	   Work on one value (++a, --b, -a)	             a++
+                      Bitwise	   Work on bits (&,	                               , ^, <<, >>)
+                     Ternary	   Shortcut if-else condition ? val1 : val2	    a > b ? x : y
+
+👨‍🎓 Example Using Student Class (Basic Operators):
+
+class Student {
+    void operatorDemo() {
+        int marks1 = 85;
+        int marks2 = 90;
+
+        // Arithmetic
+        int total = marks1 + marks2;
+        System.out.println("Total: " + total);
+
+        // Relational
+        System.out.println("Is marks1 greater? " + (marks1 > marks2));
+
+        // Logical
+        boolean passed = (marks1 > 40) && (marks2 > 40);
+        System.out.println("Passed both subjects: " + passed);
+
+        // Assignment
+        int bonus = 5;
+        bonus += 10; // same as bonus = bonus + 10
+        System.out.println("Bonus: " + bonus);
+
+        // Unary
+        int age = 20;
+        age++;
+        System.out.println("Age after 1 year: " + age);
+
+        // Ternary
+        String result = (marks1 > 50) ? "Pass" : "Fail";
+        System.out.println("Result: " + result);
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.operatorDemo();
+    }
+}
+Explanation of Code:
+       +, >, &&, =, ++, ? : are all different operators
+       Used them to calculate marks, check if passed, add bonus, and more
+       Ternary operator is a short version of if-else
+
+       What Is Operator Precedence?
+             Operator precedence means which operator runs first when multiple are in the same line.
+
+Example:
+
+     int result = 10 + 5 * 2;
+      Here * runs first, not +
+     So 5 * 2 = 10, then 10 + 10 = 20
+
+          Java follows a priority order to run operators — multiply/divide has higher priority 
