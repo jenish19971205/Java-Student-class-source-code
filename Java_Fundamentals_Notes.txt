@@ -217,6 +217,19 @@ Day 2
 
          Real use? → Helps to design clean structure, hide inner logic, and force rules in project.
 
+  Packages :
+         Package is like a folder in Java where we group related classes together.
+         It helps to keep the code organized, avoid name conflicts, and reuse code easily.
+
+Explanation:
+         Just like we keep different files in different folders (like pics, docs, videos),
+         in Java we keep related classes in one package so things don’t get messy.
+
+ Example:
+         java.util → for utility stuff (like Scanner, ArrayList)
+         java.io → for input/output classes
+         You can also create your own packages in projects.
+
 
 
 
