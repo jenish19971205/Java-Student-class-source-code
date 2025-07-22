@@ -172,15 +172,15 @@ class Student {
         s.operatorDemo();
     }
 }
-Explanation of Code:
-       +, >, &&, =, ++, ? : are all different operators
-       Used them to calculate marks, check if passed, add bonus, and more
-       Ternary operator is a short version of if-else
+     Explanation of Code:
+             +, >, &&, =, ++, ? : are all different operators
+             Used them to calculate marks, check if passed, add bonus, and more
+             Ternary operator is a short version of if-else
 
        What Is Operator Precedence?
              Operator precedence means which operator runs first when multiple are in the same line.
 
-Example:
+        Example:
 
              int result = 10 + 5 * 2;
              Here * runs first, not +
@@ -188,4 +188,76 @@ Example:
 
           Java follows a priority order to run operators — multiply/divide has higher priority 
           when running multiple operators in one line.
+
+4. Strings in detail :
+
+        String = group of characters (text)
+       In Java, it’s a class, not a data type — but we use it like a normal variable.
+       If we want to store and work with text (like name, address, etc.), we use String in Java.
+
+       String name = "Ram";
+
+   Ways to Create String
+      1. Using Double Quotes (common way)
+           String name = "Ram";
+           Java directly stores it in memory (String Constant Pool).
+      2. Using new Keyword (rarely used)
+
+           String name = new String("Ram");
+           Stored in heap memory, creates new object every time.
+
+   Common String Methods
+
+           Method	                  Use	                         Example
+          length()	Finds how long the string is	       "Ram".length() → 3
+        charAt(index)	Get char at specific index 	      "Ram".charAt(1) → 'a'
+        toUpperCase()	Convert to caps	                        "ram".toUpperCase() → "RAM"
+        toLowerCase()	Convert to small letters	               "RAM".toLowerCase() → "ram"
+        equals()	         Compare 2 strings (case-sensitive)	       "Ram".equals("ram") → false
+      equalsIgnoreCase()	Compare strings without case check	       "Ram".equalsIgnoreCase("ram") → true
+       contains()	         Check if part exists	                "Student".contains("dent") → true
+      substring(start, end)    Get part of string	                "Student".substring(0, 3) → "Stu"
+        concat()	           Join 2 strings	                          "Ram".concat(" Kumar") → "Ram Kumar"
+        replace()	               Replace text	                 "Ram".replace("a", "o") → "Rom"
+
+Example Using Student Class
+
+class Student {
+    void stringOperations() {
+        String name = "Arun";
+        String course = "Java";
+
+        // Length
+        System.out.println("Name length: " + name.length());
+
+        // Uppercase
+        System.out.println("Uppercase: " + name.toUpperCase());
+
+        // Char at position
+        System.out.println("2nd letter: " + name.charAt(1));
+
+        // String join
+        String fullInfo = name + " is learning " + course;
+        System.out.println("Info: " + fullInfo);
+
+        // Equals check
+        System.out.println("Name equals Arun? " + name.equals("Arun"));
+
+        // Contains
+        System.out.println("Name contains 'ru'? " + name.contains("ru"));
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.stringOperations();
+    }
+}
+
+Easy Explanation
+        name.length() → how many letters in the name
+        toUpperCase() → make it full caps
+        charAt(1) → gives second letter (index starts from 0)
+        + → you can join strings easily using + or concat()
+        equals() → compare strings safely
+        contains() → check if something is inside the string
 
