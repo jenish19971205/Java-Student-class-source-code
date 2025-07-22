@@ -1,0 +1,62 @@
+1. Data types
+         Data types are used to define what type of value a variable can hold (like number, text, decimal, etc.)
+         Two Main Types of Data Types:
+1. Primitive Data Types (basic built-in types — small & fast)
+          There are 8 primitive types:
+
+            Type	    Example Value	           What It Stores
+             int	        25	                  whole numbers
+            float	       65.5f	                decimal numbers (less precision)
+            double	     89.77	                decimal numbers (more precision)
+             char	        'A'	                  single character
+            boolean	   true / false	            true or false values
+             byte	          120	                 small range numbers
+             short	      25000	                 short-range numbers
+            long	      9999999999L	              big numbers
+
+
+
+2. Non-Primitive Data Types (also called Reference types)
+                 Type	      Example	      What It Is
+               String	       "Ram"	      sequence of characters
+                Array	      {1,2,3}	      collection of values
+                Class	      Student s1	   user-defined blueprint
+                Object	   new Student()	 actual thing from class
+
+💻 Example Using Student Class with Different Data Types:
+
+         class Student {
+              // Primitive types
+               int age = 20;
+                float marks = 85.5f;
+               char grade = 'A';
+               boolean isPassed = true;
+
+             // Non-primitive types
+             String name = "Ram";
+
+    void showDetails() {
+        System.out.println("Name: " + name);        // String
+        System.out.println("Age: " + age);          // int
+        System.out.println("Marks: " + marks);      // float
+        System.out.println("Grade: " + grade);      // char
+        System.out.println("Passed: " + isPassed);  // boolean
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.showDetails();
+    }
+}
+        
+      Explanation for the Code
+            int age = 20; → holds a whole number (student’s age)
+            float marks = 85.5f; → holds decimal number (student’s marks) — f is needed
+            char grade = 'A'; → holds a single character
+             boolean isPassed = true; → true or false value
+            String name = "Ram"; → holds a sequence of characters (student name)
+           The method showDetails() prints all the values stored using different data types.
+
+📦 TL Notes Summary (Ready to Share)
+Learned Java Data Types — primitive (int, float, char, boolean, etc.) and non-primitive (String, Array, Class). Practiced using Student class to define and print different types of data. Covered all types with real examples and beginner-friendly explanations.
+
