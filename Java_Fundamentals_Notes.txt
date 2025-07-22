@@ -292,6 +292,90 @@ studentapp/
             Structure will always stay neat and clear — super helpful for teams
 
 
+Day 3 :
+
+           1.  Open IntelliJ → Create New Project
+               Click "New Project"
+               Choose Spring Initializr on the left side
+               Service URL: Keep default → https://start.spring.io
+               Click Next
+
+           2. Fill Project Details
+               Group: com.example
+               Artifact: helloworld
+               Name: helloworld
+               Type: Maven (Default)
+               Language: Java
+              Java version: 17 or 21 (based on your IntelliJ setup)
+              Click Next
+
+           3. Add Dependencies
+              Tick these checkboxes:
+              Spring Web
+              This is enough for Hello World API.
+              Click Next → then Finish
+             IntelliJ will generate your Spring Boot project folder and it may take a few seconds to download dependencies (look at the bottom                   progress bar).
+
+           4. Project Structure (auto-created by IntelliJ)
+
+helloworld/
+ └── src/
+     └── main/
+         ├── java/
+         │   └── com/example/helloworld/
+         │       ├── HelloWorldApplication.java
+         │       └── HelloController.java  ← (you’ll create this file)
+         └── resources/
+             └── application.properties
+    
+         5. Your Main Class – HelloWorldApplication.java
+            package com.example.helloworld;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class HelloWorldApplication {
+	public static void main(String[] args) {
+		SpringApplication.run(HelloWorldApplication.class, args);
+	}
+}
+         6. Create Your Controller – HelloController.java
+            Right-click on com.example.helloworld →
+            New → Java Class → Name it: HelloController
+
+Paste this code:
+
+package com.example.helloworld;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloController {
+
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello World!";
+    }
+}
+          7. Run the Application
+             Go to HelloWorldApplication.java
+             Right-click → Run 'HelloWorldApplication.main()'
+             In the console, you’ll see:
+             Tomcat started on port(s): 8080
+              This means your API is running.
+
+          8. Open Browser or Postman
+          Go to:
+
+          http://localhost:8080/hello
+          You’ll see:
+
+          Hello World!
+     Def:
+            I used IntelliJ to create a Spring Boot app. I created one REST controller with a /hello endpoint. When I hit the URL, I got Hello                 World! in the browser. Everything done inside IntelliJ using Spring Initializr.
+
 
 
 
