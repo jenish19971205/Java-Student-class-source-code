@@ -384,15 +384,96 @@ class Student {
     }
 }
 
-Easy Explanation:
+    Easy Explanation:
        name → can be used in any non-static method (belongs to object)
        school → can be used anywhere in class (static = belongs to class)
        age → only inside the printDetails() method
       course → only inside the if block where it was created
 
- Analogy:
+     Analogy:
         Local = Just temporary, like something in your pocket
         Instance = Belongs to object, like your ID card
         Static = Shared by all, like school name
         Block = Limited, like a locker only in one room
 
+8. Constructors :
+               A constructor is like a special method that runs automatically when you create an object.
+              It’s used to set values (initialize) when the object is born.
+
+      Think of it like:
+              When a new student joins, we give his name, age, etc. — that's what constructor does when object is created.
+
+ Rules of Constructor:
+          Same name as the class
+          No return type (not even void)
+          Runs automatically when object is created using new
+          Can be default, parameterized, or multiple (overloading)
+
+Types of Constructors 
+         1.  Default Constructor
+              No input values. Java gives one if you don’t create.
+
+class Student {
+    Student() {
+        System.out.println("Default constructor called");
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student();  // Automatically runs
+    }
+}
+         2. Parameterized Constructor
+              You send values when object is created.
+
+class Student {
+    String name;
+    int age;
+
+    Student(String n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void show() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student("Arun", 21);
+        s1.show();
+    }
+}
+         3. Constructor Overloading
+              Same constructor name, but different parameters.
+
+class Student {
+    String name;
+    int age;
+
+    Student() {
+        System.out.println("Default Constructor");
+    }
+
+    Student(String n) {
+        name = n;
+        System.out.println("Name set: " + name);
+    }
+
+    Student(String n, int a) {
+        name = n;
+        age = a;
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+
+    public static void main(String[] args) {
+        new Student();
+        new Student("Arun");
+        new Student("Arun", 22);
+    }
+}
+          Quick Difference (Constructor vs Method)
+           Feature	          Constructor	                             Method
+             Name	                   Same as class	                            Any name
+          Return Type	          No return type	                     Has return type (or void)
+           When Called	  Runs automatically when object made	    Called manually using object.method()
+          Purpose	                   Initialize object	                 Perform some action
