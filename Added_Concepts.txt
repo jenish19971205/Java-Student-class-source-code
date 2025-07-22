@@ -57,7 +57,63 @@
             String name = "Ram"; → holds a sequence of characters (student name)
            The method showDetails() prints all the values stored using different data types.
 
-Def: 
+        Def: 
 
            Learned Java Data Types — primitive (int, float, char, boolean, etc.) and non-primitive (String, Array, Class). Practiced using Student                class to define and print different types of data. Covered all types with real examples and beginner-friendly explanations.
 
+        Type Casting :
+
+            Type casting just means changing one type of value to another.
+            Like changing a number without decimal (int) to number with decimal (float) or the other way.
+            Example: You have 10 rupees in int, but you want it like 10.00 in float. That’s casting.
+
+        Two Types You Must Know:
+              1. Widening Casting → Java does it automatically
+                 Small ➡ Big type
+
+                  int age = 18;
+                  float newAge = age;  // no problem
+                  Like giving 18 to a bigger box (float) → it becomes 18.0
+                  No loss, no danger, Java handles it for you.
+
+              2. Narrowing Casting → You must do it manually
+                 Big ➡ Small type
+
+
+                 double marks = 99.75;
+                 int newMarks = (int) marks;
+                 You’re putting 99.75 into a smaller box (int) → it cuts the .75
+                  You MUST tell Java: “Hey, do this” by using (int)
+                  Possible loss of data — so be careful.
+
+          Student Example Code 
+
+class Student {
+    void showCasting() {
+        // Widening
+        int age = 20;
+        float convertedAge = age;
+        System.out.println("Widening: " + convertedAge);  // 20.0
+
+        // Narrowing
+        double marks = 85.6;
+        int convertedMarks = (int) marks;
+        System.out.println("Narrowing: " + convertedMarks);  // 85
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.showCasting();
+    }
+}
+      
+      Explanation of Code:
+          int age = 20; → normal age value
+          float convertedAge = age; → becomes 20.0 → no issue (auto)
+          double marks = 85.6; → marks with decimal
+          int convertedMarks = (int) marks; → becomes 85 (cuts .6)
+          System.out.println() shows both outputs
+
+Def: 
+
+       Learned Type Casting — changing value types. Covered auto casting (int ➡ float) and manual casting (double ➡ int) with Student example.
