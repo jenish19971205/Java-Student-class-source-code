@@ -942,7 +942,83 @@ class StudentFileReader {
              But here — Java automatically closes it after the work is done. Clean and simple.
 
       definition:
-              "try-with-resources is like telling Java to open something (like a file) and saying:
-              ‘Once I finish my work, you close it for me, bro.’
-               We use it to avoid memory leaks or forgetting to close files manually.”
+               try-with-resources is like telling Java to open something (like a file) and saying:
+               Once I finish my work, you close it for me
+               We use it to avoid memory leaks or forgetting to close files manually.
+
+
+16. JVM Architexture :
+
+       What is JVM?
+               JVM = Java Virtual Machine
+               It's the part of Java that runs your program.
+               You write .java → Java compiles it to .class → JVM runs it.
+
+      Think of JVM like:
+              “The engine that runs your Java code.”
+
+      Easy Flow to Understand
+               .java → (compiled by compiler) → .class → (run by JVM) → Output on screen
+                JVM Architecture — Simple Breakdown
+              Imagine JVM like a factory. Here’s what’s inside:
+
+       1. Class Loader 
+               Loads your .class files into memory.
+               It takes your compiled .class file and prepares it for execution.
+
+      2. Method Area 
+               Stores info about your classes, variables, methods, etc.
+
+       Example:
+               If you write a class Student, this is where the method names and variable names are remembered.
+
+       3. Heap 
+               Stores all objects.
+
+          Like:
+              Student s1 = new Student(); // 🔥 this object goes to the heap
+
+       4. Stack 🥞
+              Stores method calls and local variables.
+              Every time a method runs, Java keeps track of it using the stack.
+             main() calls → print() calls → etc...
+ 
+       5. Program Counter (PC) Register 🎯
+              Keeps track of which line of code is currently being executed.
+
+      6. Native Method Stack 📲
+               Used when Java talks to native (C/C++) code.
+               We don’t usually deal with this as beginners.
+
+      7. Execution Engine 🚀
+               The main worker — runs the code line by line.
+                It reads bytecode and executes it.
+       Inside this:
+
+                a) Interpreter – Runs the code line-by-line.
+                b) JIT Compiler (Just-In-Time) – Speeds up the performance by compiling chunks of code.
+
+      8. Garbage Collector 🗑️
+                Cleans up unused objects from the heap.
+                Like if you create 100 objects and don't use them anymore, GC will delete them to save memory.
+
+🗂️ Summary Table:
+         Part	               What it does
+      Class Loader	     Loads .class files
+       Method Area	     Stores class-level data
+           Heap	               Stores objects
+          Stack	               Stores method calls, local variables
+        PC Register	      Tracks which line is executing
+       Execution Engine	      Runs your bytecode
+      Garbage Collector	      Cleans unused memory
+
+      Def :
+
+                JVM is like the Java boss that runs your .class file.
+                It has different areas like one for storing objects (Heap), one for method calls (Stack), and a smart dude (Execution Engine)                     that runs everything.
+                And it even has a cleaner (Garbage Collector) who deletes waste memory.
+
+     simple Def :
+                JVM Architecture – how Java runs behind the scenes. JVM loads .class files using Class Loader, stores data in Heap & Stack, and                    runs code using Execution Engine. Garbage Collector manages memory by cleaning unused objects.
+
 
