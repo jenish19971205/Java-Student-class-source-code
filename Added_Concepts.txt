@@ -1,7 +1,7 @@
 1. Data types
          Data types are used to define what type of value a variable can hold (like number, text, decimal, etc.)
          Two Main Types of Data Types:
-1. Primitive Data Types (basic built-in types — small & fast)
+     1. Primitive Data Types (basic built-in types — small & fast)
           There are 8 primitive types:
 
             Type	    Example Value	           What It Stores
@@ -16,14 +16,14 @@
 
 
 
-2. Non-Primitive Data Types (also called Reference types)
+    2. Non-Primitive Data Types (also called Reference types)
                  Type	      Example	      What It Is
                String	       "Ram"	      sequence of characters
                 Array	      {1,2,3}	      collection of values
                 Class	      Student s1	   user-defined blueprint
                 Object	   new Student()	 actual thing from class
 
-💻 Example Using Student Class with Different Data Types:
+     Example Using Student Class with Different Data Types:
 
          class Student {
               // Primitive types
@@ -61,7 +61,7 @@
 
            Learned Java Data Types — primitive (int, float, char, boolean, etc.) and non-primitive (String, Array, Class). Practiced using Student                class to define and print different types of data. Covered all types with real examples and beginner-friendly explanations.
 
-        Type Casting :
+2. Type Casting :
 
             Type casting just means changing one type of value to another.
             Like changing a number without decimal (int) to number with decimal (float) or the other way.
