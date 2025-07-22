@@ -57,6 +57,7 @@
             String name = "Ram"; → holds a sequence of characters (student name)
            The method showDetails() prints all the values stored using different data types.
 
-📦 TL Notes Summary (Ready to Share)
-Learned Java Data Types — primitive (int, float, char, boolean, etc.) and non-primitive (String, Array, Class). Practiced using Student class to define and print different types of data. Covered all types with real examples and beginner-friendly explanations.
+Def: 
+
+           Learned Java Data Types — primitive (int, float, char, boolean, etc.) and non-primitive (String, Array, Class). Practiced using Student                class to define and print different types of data. Covered all types with real examples and beginner-friendly explanations.
 
