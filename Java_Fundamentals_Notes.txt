@@ -218,6 +218,7 @@ Day 2
          Real use? → Helps to design clean structure, hide inner logic, and force rules in project.
 
   Packages :
+
          Package is like a folder in Java where we group related classes together.
          It helps to keep the code organized, avoid name conflicts, and reuse code easily.
 
@@ -230,7 +231,65 @@ Explanation:
          java.io → for input/output classes
          You can also create your own packages in projects.
 
+Setting up for maven project :
 
+         Maven is like your Java project manager — it helps to organize files, manage dependencies (like downloading tools/libraries), and build               projects easily.
+
+How to Set Up a Maven Project in IntelliJ 
+          Step 1: Open IntelliJ & Create Maven Project
+                  Open IntelliJ
+                  Click File > New > Project
+                  Select Maven
+                  Click Next
+
+          Step 2: Fill Project Details
+                  Group ID: like a company/folder name → e.g. com.jenish.project
+                  Artifact ID: your project name → e.g. studentapp
+                  Click Finish
+                  Now IntelliJ will create a project with folders like:
+
+studentapp/
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── App.java (default main class)
+│   └── test/
+├── pom.xml   <-- Maven project file
+           
+           Step 3: Understand pom.xml (Very Important!)
+                   pom.xml is the heart of Maven project.
+                   It’s where you write what tools or libraries (dependencies) your project needs.
+                   Example inside pom.xml:
+
+<dependencies>
+    <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>2.10</version>
+    </dependency>
+</dependencies>
+
+           Step 4: Write Java Code Inside src/main/java
+                    Create your own class like:
+
+                   package com.jenish.project;
+
+                  public class Student {
+                    public void show() {
+                         System.out.println("Maven Student Project working!");
+                      }
+                   }  
+          Then use it in your App.java.
+
+          Step 5: Run the Project
+                  Right-click on the App.java or your main class
+                  Click Run 'App.main()'
+                   You’ll see your output!
+
+            Maven helps you manage Java projects smartly
+            You only need to focus on coding, Maven handles folder setup and library downloads
+            Everything you need is inside pom.xml
+            Structure will always stay neat and clear — super helpful for teams
 
 
 
