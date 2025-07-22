@@ -727,3 +727,98 @@ class StudentMap {
          You can add, get, or remove students by roll number
          put() = add, get() = fetch, remove() = delete
 
+13. Streams :
+
+          First... Why do we even need Streams?
+                    You have a list of students.
+          Now you want to:
+                     Get students who are older than 20
+                     Only pick their names
+                     Sort them by name
+                     Maybe print all names
+              Normally, you’ll do this using for-loops, if, etc. right?
+
+      But Stream says:
+             no need to write big code. Just chain it like a flow and I’ll handle it."
+
+      So... What’s a Stream?
+             A Stream is just a way to do operations on a list in a smooth chain.
+
+      It’s like this:
+
+
+      students
+              .stream()       // Start the flow
+              .filter(...)    // Keep only what you want
+              .map(...)       // Change data if needed
+              .sorted(...)    // Sort it
+               .collect(...)   // Collect back as list
+
+       Think of it like making tea:
+             Milk ➝ add tea powder ➝ filter ➝ pour into cup
+
+        Real Student Example (Simple Code)
+
+import java.util.*;
+import java.util.stream.*;
+
+class Student {
+    String name;
+    int age;
+
+    Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+class StreamDemo {
+    public static void main(String[] args) {
+        List<Student> students = Arrays.asList(
+            new Student("Ram", 21),
+            new Student("Sam", 18),
+            new Student("Meena", 23),
+            new Student("Karthik", 19)
+        );
+
+        // 1. Get students older than 20
+        List<Student> filtered = students.stream()
+            .filter(s -> s.age > 20)
+            .collect(Collectors.toList());
+
+        System.out.println("Students age > 20:");
+        for (Student s : filtered) {
+            System.out.println(s.name + " (" + s.age + ")");
+        }
+
+        // 2. Get just their names
+        List<String> names = students.stream()
+            .map(s -> s.name)
+            .collect(Collectors.toList());
+
+        System.out.println("All student names:");
+        System.out.println(names);
+
+        // 3. Sort by name
+        List<Student> sorted = students.stream()
+            .sorted((a, b) -> a.name.compareTo(b.name))
+            .collect(Collectors.toList());
+
+        System.out.println("Sorted by name:");
+        for (Student s : sorted) {
+            System.out.println(s.name);
+        }
+    }
+}
+         Super Simple Breakdown
+                Stream Part	What it does
+                .stream()	         Starts the stream (data flow)
+                 .filter()	         Only keep what you want (like age > 20)
+                  .map()	         Change it (like get only name)
+                  .sorted()	Sort the list
+                  .collect()	Convert it back to List or Set
+Def  :
+
+           Practiced Java Streams — used to process list data easily like filtering, mapping, and sorting. Used Student list to filter by age, get            names, and sort by name without using loops. Very useful for cleaner and shorter code.
+
+
