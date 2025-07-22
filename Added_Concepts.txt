@@ -585,8 +585,68 @@ class Main {
         s.study();
     }
 }
-    Explain:
+      Explain:
           No class name — just override method quickly.
          Mostly used when you want to change small behavior once.
          Very common in Android, UI buttons, etc.
+
+10. Enum :
+
+           enum = short for enumeration
+           It’s a special type in Java used to store a group of fixed values (constants).
+           Like a list of options that never change.
+
+        Chill Explanation:
+              Think of enums like this:
+               You're filling a form and it asks:
+               What is your year of study? — First, Second, Third, Final
+               These are fixed values. You can’t just type anything.
+               So you use enum to store these options.
+  
+   Why use Enum?
+            To avoid typos and random values (e.g., no one types "firsst")
+             Cleaner and more meaningful than just using strings or numbers
+            Easy to switch through values using switch or if
+
+ Example: Using Enum with Student
+
+enum Year {
+    FIRST, SECOND, THIRD, FINAL
+}
+
+class Student {
+    String name;
+    Year year;
+
+    Student(String name, Year year) {
+        this.name = name;
+        this.year = year;
+    }
+
+    void showDetails() {
+        System.out.println(name + " is in " + year + " year.");
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student("Arun", Year.SECOND);
+        Student s2 = new Student("Meena", Year.FINAL);
+
+        s1.showDetails();
+        s2.showDetails();
+    }
+}
+
+Code Explain :
+         enum Year holds only allowed values: FIRST, SECOND, THIRD, FINAL
+         Inside Student, we store which year the student belongs to using the enum
+         When printing, we get something like:
+        Arun is in SECOND year.
+
+Bonus: Enum with switch
+         You can also use enum in a switch statement to do different actions:
+
+switch (s1.year) {
+    case FIRST: System.out.println("Just started college!"); break;
+    case FINAL: System.out.println("Final year pressure!"); break;
+}
 
