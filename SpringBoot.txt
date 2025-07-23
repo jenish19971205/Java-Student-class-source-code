@@ -1,0 +1,62 @@
+@SpringBootApplication
+     This is the main starting point of a Spring Boot app.
+     It tells Spring:
+           “This class has config things” (@Configuration)
+           “Check which jars I added and auto-setup everything” (@EnableAutoConfiguration)
+           “Also look inside my project folders to find beans like @Service, @RestController” (@ComponentScan)
+           You can just use @SpringBootApplication instead of writing all those 3.
+
+@RestController
+    Tells Spring:
+            “This class will give JSON or text in return — not HTML pages.”
+            It’s a combo of @Controller + @ResponseBody
+            Mostly used for API classes.
+ @Controller
+            Used in web apps.
+    It tells Spring:
+            “This class handles browser requests and returns HTML pages (like JSP, Thymeleaf).”
+
+ @GetMapping("/path")
+           Runs when someone sends a GET request to this URL.
+           Example: @GetMapping("/student") → runs when someone opens localhost:8080/student
+
+@PostMapping("/path")
+           Runs when someone sends a POST request (like submitting form or sending data).
+
+@PutMapping, @DeleteMapping
+            Used for updating and deleting data through APIs.
+
+@Service
+     Tells Spring:
+            “This class has the main logic or calculations — it’s a service layer.”
+             Spring will manage it as a bean.
+ @Repository
+             Used in DB (Database) layer.
+     Tells Spring:
+             “This class will talk to the database (like fetch or save data).”
+              Also helps catch database-related errors easily.
+
+ @Component
+              Base-level annotation.
+      Tells Spring:
+              “This class is a bean. Just manage it.”
+               All others like @Service, @Repository, etc. are built on top of this.
+
+ @Autowired
+       Tells Spring:
+              give me this object — I won’t create it myself.”
+              Spring will auto-give (inject) the object wherever needed.
+              No need to write new Something().
+
+@RequestParam
+             Used to get values from URL query.
+             Like: /user?id=10 → you can get id=10 using @RequestParam int id
+
+ @PathVariable
+             Gets value from URL path.
+             Like: /user/10 → you can get 10 using @PathVariable int id
+
+@RequestBody
+              Used when someone sends JSON data to your API.
+              It will convert that JSON into your Java object.
+
